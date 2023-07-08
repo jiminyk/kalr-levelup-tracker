@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Energy Tracker</title>
+</head>
+<body>
+    <div id="app">
+        <label>
+            Current Energy:
+            <input type="number" v-model="currentEnergy" placeholder="E.g. 114"/>
+        </label>
+        <label>
+            Current XP:
+            <input type="number" v-model="currentXP" placeholder="E.g. 1100"/>
+        </label>
+        <label>
+            XP Needed to Level Up:
+            <input type="number" v-model="xpToLevelUp" placeholder="E.g. 2000" @keyup.enter="calculateTimeToLevelUp"/>
+        </label>
+        <button @click="calculateTimeToLevelUp">Calculate Time to Level Up</button>
+        <h1>Time to Level Up: {{ formattedTimeToLevelUp }}</h1>
+        <h2>Total Energy Required to Level Up: {{ totalEnergyRequired }}</h2>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+</body>
+</html>
