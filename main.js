@@ -1,6 +1,6 @@
-import { inject } from '@vercel/analytics';
+/* import { inject } from '@vercel/analytics';
  
-inject();
+inject(); */
 
 const app = Vue.createApp({
     data() {
