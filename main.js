@@ -45,7 +45,7 @@ const app = Vue.createApp({
                 if (this.timeToLevelUp >= finalTimeToLevelUp) {
                     clearInterval(intervalId);
                 }
-            }, 100); // Adjust this value to change the speed of the count up
+            }, 50); // Adjust this value to change the speed of the count up
         }
     }
 });

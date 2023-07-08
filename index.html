@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Energy Tracker</title>
     <style>
+        * {
+            margin : 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
         }
         div#app {
             max-width : 300px ;
@@ -14,9 +20,11 @@
             text-align: center ;
         }
         label {
+            text-align: left;
             display : block ;
             width: 100% ;
             margin-bottom : 6px ;
+            font-size: .9em;
         }
         input {
             display: block ;
@@ -39,10 +47,10 @@
 </head>
 <body>
     <div id="app">
-        <h1>Time to Level Up: <br>
-            {{ formattedTimeToLevelUp }}</h1>
-        <h2>Total Energy Required <br>
-            to Level Up: {{ totalEnergyRequired }}</h2>
+        <h1>Energy needed to level up: <br>
+            {{ totalEnergyRequired }}</h1>
+        <h2>Time to regen that energy: <br>
+            {{ formattedTimeToLevelUp }}</h2>
         <label>
             Current Energy:
             <input type="number" v-model="currentEnergy" placeholder="E.g. 114"/>
